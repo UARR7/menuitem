@@ -1,0 +1,25 @@
+{
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "roots": ["<rootDir>/tests"],
+  "testMatch": ["**/*.test.ts"],
+  "transform": {
+    "^.+\\.ts$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "^@/(.*)$": "<rootDir>/src/$1"
+  },
+  "coverageDirectory": "coverage",
+  "collectCoverageFrom": [
+    "src/**/*.ts",
+    "!src/index.ts",
+    "!src/migrations/**",
+    "!src/seeders/**"
+  ],
+  "setupFilesAfterFramework": [],
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "tsconfig.json"
+    }
+  }
+}
